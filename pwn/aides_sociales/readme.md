@@ -10,16 +10,10 @@ Try to lower your balance and trick the system!
 
 <br>
 
-## Level: Medium
+<u>Level</u>: Medium
 
-<br>
+<u>Connection</u>: `nc <ip> <port>`
 
-## Connection: `nc -p XX <ip>`
+<u>Points</u>: XX points
 
-<br>
-
-## Points: XX points
-
-<br>
-
-Author: Ooggle
+<u>Author</u>: Ooggle
