@@ -1,4 +1,4 @@
-# Easy
+# Secure security software
 
 With the `strings` command:
 
