@@ -7,7 +7,6 @@
 html, body { height: 100%;}
 
 body {
-
     font-family: 'Azeret Mono', monospace;
     font-size: 20px;
     line-height: 1.42857;
@@ -52,19 +51,36 @@ i {
     justify-content: center;
     align-items: center;
     display: inline-block;
-    padding: 50px;
+    padding: 30px;
     margin: 0 auto;
 }
 
 .container {
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
-    border: 1px solid #c3c3c3;
 }
 .item {
     width: 33%;
     margin: 10px;
+}
+.item3 {
+    width: 7%;
+}
+.item4 {
+    width: 19%;
+}
+.item5 {
+    width: 7%;
+}
+.square {
+    border-radius: 20px;
+    border-radius: 5%;
+    border: 1px solid #FFEEAD;
+    overflow-wrap: break-word;
+}
+
+.send-msg {
+    width: 100%;
 }
 
 input,textarea,select {

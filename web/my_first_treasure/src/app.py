@@ -1,9 +1,7 @@
 from flask import Flask, render_template, make_response, request, redirect
 
+# Create the APP
 app = Flask(__name__)
-app.config["TEMPLATES_AUTO_RELOAD"] = True # Remove it in prod
-app.config["SECRET_KEY"] = "74d35de28ff1ca91a54d293f0e6da8a5"
-
 
 # Error handler
 @app.errorhandler(404)

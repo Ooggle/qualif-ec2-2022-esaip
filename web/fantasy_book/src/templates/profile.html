@@ -3,27 +3,38 @@
     {% include 'inc/navbar.html' %}
     <div class="container">
         <!-- Left div -->
-        <div class="item" style="background-color: black;">
-            <div class="mgb-2 mgt-1"><i><img id="alert" src="{{ url_for('static', filename='images/'+user['picture']) }}" width="140" alt="Profile"/></i></div>
+        <div class="item">
+            <div class="mgb-2 mgt-1"><i><img id="alert" src="{{ url_for('static', filename='images/'+user['picture'])+'.png' }}" width="140" alt="{{desc}}"/></i></div>
             <p>Name: <h2>{{user["username"]}}</h2></p>
         </div>
         <!-- Middle div -->
-        <div class="item" style="background-color: brown;">
+        <div class="item">
             <legend>Send message</legend>
-			<textarea type="text" name="message"></textarea>
-            {% for item in navigation %}
-                <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+            <form method="post" action="">
+                <textarea class="send-msg" type="text" name="message"></textarea>
+                <button class="mgb-2" type="submit">Post</button>
+            </form>
+
+            {% if post == "empty" %}
+            <p class="mgb-2">You can't post empty string!</p>
+            {% endif %}
+
+            {% for msg in user["messages"] %}
+                <p>{{msg}}</p>
+                <div class="line mgb-1 mgt-1"></div>
             {% endfor %}
-            <p>{{user["messages"]}}</p>
-            <div class="line"></div>
         </div>
         <!-- Rigth div -->
-        <div class="item" style="background-color: gray;">
-            <p class="mgt-1">Age: {{user["age"]}}</p>
-            <p>Sexe: {{user["sexe"]}}</p>
-            <legend>Description:</legend>
-            <p>{{user["description"]}}</p>
+        <div class="item3"></div>
+        <div class="item4 mgt-1">
+            <div class="square">
+                <p class="mgt-1">Age: {{user["age"]}}</p>
+                <p>Sexe: {{user["sexe"]}}</p>
+                <legend class="mgt-2">Description:</legend>
+                <p class="mgb-1">{{user["description"]}}</p>
+            </div>
         </div>
+        <div class="item5"></div>
     </div>
 </body>
 </html>

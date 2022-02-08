@@ -1,3 +1,2 @@
-User-agent: Admin credentials
-Allow username: part4
-Allow password: _C4n_B3_
+User-agent: *
+Disallow: /backup

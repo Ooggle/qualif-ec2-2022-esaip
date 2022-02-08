@@ -3,6 +3,9 @@ FROM python:latest
 # Install package dependences
 RUN apt -y -qq update;
 
+# Copy flag
+ADD flag.txt /flag.txt
+
 # Copy flask files
 WORKDIR /usr/app
 ADD ./src/ .

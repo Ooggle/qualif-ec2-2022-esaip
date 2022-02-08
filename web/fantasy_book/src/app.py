@@ -1,8 +1,19 @@
-from flask import Flask, render_template, make_response, request, redirect, session
+from flask import Flask, render_template_string, render_template, make_response, request, redirect, session
+from os import urandom
+from re import sub
 
+# Flag is located to /flag.txt
+
+# Create the APP
 app = Flask(__name__)
-app.config["TEMPLATES_AUTO_RELOAD"] = True # Remove it in prod
-app.config["SECRET_KEY"] = "40da48eaff725cd443dcd3bf2124f5b0"
+app.config["SECRET_KEY"] = urandom(16)
+
+# Secure input
+def secure(s):
+    r = ["{{", "}}", "{%", "%}", "\.[a-zA-Z]", "import", "os", "system", "self", '\["', " "]
+    for elem in r:
+        s = sub(elem, "", s)
+    return s
 
 
 # Error handler
@@ -11,27 +22,59 @@ def page_not_found(error):
     return redirect("/", 302)
 
 
+# robots.txt
+@app.route("/robots.txt", methods=["GET"])
+def robots():
+    with open(file="robots.txt", mode="r") as file:
+        response = make_response(file.read(), 200)
+        response.mimetype = "text/plain"
+    return response
+
+
 # Home page
 @app.route("/", methods=["GET"])
 def index():
     # Init
+    if "logged" not in session:
+        session["logged"] = None
     return make_response(render_template("index.html", logged=session["logged"]))
 
 
 # Home page
-@app.route("/profile", methods=["GET"])
+@app.route("/profile", methods=["GET", "POST"])
 def profile():
     # Init
+    if "logged" not in session:
+        session["logged"] = None
+
     if session["logged"] == True:
-        return make_response(render_template("profile.html", logged=session["logged"], user=session))
+        pic = secure(session["picture"])
+        desc = render_template_string(f"What a cool user picture #{pic}") 
+
+        if request.method == "GET":
+            return make_response(render_template("profile.html", logged=session["logged"], desc=desc, user=session))
+
+        elif request.method == "POST":
+            message = request.form.get("message")
+
+            if message == "":
+                return make_response(render_template("profile.html", logged=session["logged"], desc=desc, user=session, post="empty"))
+            else:
+                session["messages"] = session["messages"] + [message] # bug on append not getting saved after each posts
+                return make_response(render_template("profile.html", logged=session["logged"], desc=desc, user=session))
     else:
-        return make_response(render_template("login.html", login="profile", logged=session["logged"]))
+        return redirect("/login", 302)
 
 
 # Login page
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    if request.method == "GET":
+    if "logged" not in session:
+        session["logged"] = None
+
+    if request.method == "GET" and session["logged"]:
+        return redirect("/profile", 302)
+    elif request.method == "GET":
         return make_response(render_template("login.html"))
 
     elif request.method == "POST":
@@ -51,8 +94,8 @@ def login():
             session["sexe"] = sexe
             session["picture"] = picture
             session["description"] = description
-            session["messages"] = {}
-            return make_response(render_template("login.html", logged=session["logged"]))
+            session["messages"] = []
+            return redirect("/profile", 302)
 
 
 # Logout page
@@ -66,3 +109,12 @@ def logout():
     session["description"] = None
     session["messages"] = None
     return make_response(render_template("index.html", logged=session["logged"]))
+
+
+# Backup
+@app.route("/backup", methods=["GET"])
+def backup():
+    with open(file="app.py", mode="r") as file:
+        response = make_response(file.read(), 200)
+        response.mimetype = "text/plain"
+    return response
