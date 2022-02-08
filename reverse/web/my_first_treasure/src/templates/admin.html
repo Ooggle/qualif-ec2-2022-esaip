@@ -1,0 +1,24 @@
+{% include 'inc/header.html' %}
+<body>
+    {% include 'inc/navbar.html' %}
+    <legend>Login</legend>
+	<form method="post" action="">
+		<div>
+		<input class="mgb-1" type="text" name="username" placeholder="Username">
+		</div>
+		<div>
+		<input class="mgb-1" type="password" name="password" placeholder="Password">
+		</div>
+		<button class="mgb-2" type="submit">Sign in</button>
+	</form>
+    <div class="line"></div>
+
+	{% if login == "flag" %}
+	<p>Well played! You saved my credentials, that's the part5: r3Aly_1mp0rT</p>
+	<p>If you didn't found the last part, ask to favi con my best friend, he always keep it on him.</p>
+	{% elif login == "failure" %}
+    <p>Wrong credentials !</p>
+	{% endif %}
+
+</body>
+</html>

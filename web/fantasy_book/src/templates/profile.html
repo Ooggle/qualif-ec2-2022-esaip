@@ -1,0 +1,29 @@
+{% include 'inc/header.html' %}
+<body>
+    {% include 'inc/navbar.html' %}
+    <div class="container">
+        <!-- Left div -->
+        <div class="item" style="background-color: black;">
+            <div class="mgb-2 mgt-1"><i><img id="alert" src="{{ url_for('static', filename='images/'+user['picture']) }}" width="140" alt="Profile"/></i></div>
+            <p>Name: <h2>{{user["username"]}}</h2></p>
+        </div>
+        <!-- Middle div -->
+        <div class="item" style="background-color: brown;">
+            <legend>Send message</legend>
+			<textarea type="text" name="message"></textarea>
+            {% for item in navigation %}
+                <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+            {% endfor %}
+            <p>{{user["messages"]}}</p>
+            <div class="line"></div>
+        </div>
+        <!-- Rigth div -->
+        <div class="item" style="background-color: gray;">
+            <p class="mgt-1">Age: {{user["age"]}}</p>
+            <p>Sexe: {{user["sexe"]}}</p>
+            <legend>Description:</legend>
+            <p>{{user["description"]}}</p>
+        </div>
+    </div>
+</body>
+</html>

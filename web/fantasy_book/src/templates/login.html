@@ -1,0 +1,44 @@
+{% include 'inc/header.html' %}
+<body>
+    {% include 'inc/navbar.html' %}
+	<form method="post" action="">
+		<div class="mgb-0-5">
+			<legend>Username</legend>
+			<input type="text" name="username">
+		</div>
+		<div class="mgb-0-5">
+			<legend>Age</legend>
+			<input type="text" name="age">
+		</div>
+		<div class="mgb-0-5">
+			<legend>Sexe</legend>
+			<select name="sexe">
+				<option value="Man">Man</option>
+				<option value="Women">Women</option>
+				<option value="Other">Other</option>
+			</select>
+		</div>
+		<div class="mgb-0-5">
+			<legend>Picture</legend>
+			<select name="picture">
+				<option value="Man">Man</option>
+				<option value="Women">Women</option>
+				<option value="Other">Other</option>
+			</select>
+		</div>
+		<div>
+			<legend>Description</legend>
+			<textarea class="mgb-1" type="text" name="description"></textarea>
+		</div>
+		<button class="mgb-2" type="submit">Sign in</button>
+	</form>
+    <div class="line"></div>
+
+	{% if login == "empty" %}
+	<p>You can't sign in using an empty field!</p>
+	{% elif login == "profile" %}
+    <p>You must be logged to view your profile page!</p>
+	{% endif %}
+
+</body>
+</html>
