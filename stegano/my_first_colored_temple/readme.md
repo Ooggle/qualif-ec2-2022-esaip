@@ -1,4 +1,4 @@
-# Easy
+# My first colored temple
 
 <br>
 
