@@ -80,9 +80,9 @@ def challenge(s):
             s.send(f"{client[0]} paid and leave the shop...\n".encode())
         else:
             wrong_answer(s)
-    
+
     # Send the flag
-    s.send(b"Well done master! You made it, this is a treasure ...: R2Lille{}\n")
+    s.send(b"Well done master! You made it, this is a treasure ...: R2Lille{Th3_Gr34t3ST_Sh0P}\n")
     exit(0)
 
 

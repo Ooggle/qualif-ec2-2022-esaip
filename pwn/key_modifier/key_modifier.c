@@ -1,41 +1,46 @@
-
+// gcc -z execstack -fno-stack-protector key_modifier.c -o key_modifier
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
+void print_flag()
+{
+    // Print the flag
+    FILE *textfile;
+    char line[200];
+    textfile = fopen("flag.txt", "r");
+    if(textfile == NULL)
+        return;
+    
+    while(fgets(line, 200, textfile)){
+        printf("%s", line);
+    }
+    fclose(textfile);
+}
+
 int main()
 {
+ 
     int var;
-    unsigned short id = 20;
-    char message[40] = {0};
-    printf("[INFO] hello, your ID is %d.\n", id);
+    int id = 0xaaaaaaaa;
+    char buf[40];
 
     // get message from user
     printf("[INPUT] What do you want? (I only respond to people with ID 0x1BADB002): ");
-    fgets(message, 60, stdin);
+    fgets(buf,50,stdin);
 
-    printf("\n[INFO] ID: %d\n", id);
+    printf("\n[buf]: %s", buf);
+    printf("[ID] %4p\n\n", id);
 
-    if(id == 1)
+    if((id != 0xaaaaaaaa) && (id != 0x1BADB002))
     {
-        printf("[INFO] Welcome back admin.\n");
-
-        // Print the flag
-        FILE *textfile;
-        char line[200];
-        textfile = fopen("flag.txt", "r");
-        if(textfile == NULL)
-            return 1;
-        
-        while(fgets(line, 200, textfile)){
-            printf("%s", line);
-        }
-        fclose(textfile);
+        printf ("\n[INFO] You are not admin nor visitor, strange.\n");
     }
-    else
+    if(id == 0x1BADB002)
     {
-        printf("[INFO] Your are not admin, I don't care about what you say.\n");
+        printf("[INFO] Welcome back admin.\n\n");
+        print_flag();
     }
-
+    
     return 0;
 }
