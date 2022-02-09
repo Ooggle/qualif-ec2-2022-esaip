@@ -5,7 +5,7 @@ key = [10, 56, 132, 28, 205]
 
 def encrypt(clear_text):
     """
-    Encrypt function used to obtain cipher text using XXX algorithm.
+    Encrypt function used to obtain cipher text using ROX algorithm.
     """
     cipher_text = ""
     for i in range(len(clear_text)):
@@ -24,7 +24,7 @@ def decrypt(cipher_text):
 
 
 def parseArgs():
-    description = "Encryption tool using XXX algorithm."
+    description = "Encryption tool using ROX algorithm."
     parser = argparse.ArgumentParser(
         description=description,
         formatter_class=argparse.RawTextHelpFormatter,
