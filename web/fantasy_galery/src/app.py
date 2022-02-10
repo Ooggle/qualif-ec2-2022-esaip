@@ -75,6 +75,7 @@ def galery():
     db = connect_db()
     cur = db.cursor()
 
+    post = None
     if request.method == "POST":
         # Image info
         file = request.files['image']
@@ -82,12 +83,17 @@ def galery():
         file_content = b64encode(file.read()).decode()
         file_length = len(file_content)
 
-        # INSERT image in db
-        cur.execute(f"INSERT INTO galery (file_name, userID, file_length, file_content) VALUES ('{file_name}', ?, ?, ?);", (session["userID"], file_length, file_content))
-        db.commit()
+        if file_length == 0:
+            post = "empty"
+        elif file.content_type != "image/png":
+            post = "MIME"
+        else:
+            # INSERT image in db
+            cur.execute(f"INSERT INTO galery (file_name, userID, file_length, file_content) VALUES ('{file_name}', ?, ?, ?);", (session["userID"], file_length, file_content))
+            db.commit()
 
     pictures = cur.execute(f"SELECT file_name, file_content FROM galery WHERE userID = ?", (session["userID"],)).fetchall()
-    return render_template("galery.html", len=len(pictures), pictures=pictures, logged=True)
+    return render_template("galery.html", len=len(pictures), post=post, pictures=pictures, logged=True)
 
 
 # Login page

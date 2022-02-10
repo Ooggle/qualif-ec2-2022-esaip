@@ -5,6 +5,13 @@
         <input type="file" name="image">
         <button type="submit">Send</button>
     </form>
+
+	{% if post == "empty" %}
+    <p>File can't be empty !</p>
+	{% elif post == "MIME" %}
+    <p>MIME type must be image/png !</p>
+	{% endif %}
+
     <div class="container-small">
         {% for i in range(len) %}
             <div class="item">
