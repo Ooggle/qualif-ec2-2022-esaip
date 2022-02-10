@@ -37,7 +37,7 @@ def index():
     # Init
     if "logged" not in session:
         session["logged"] = None
-    return make_response(render_template("index.html", logged=session["logged"]))
+    return render_template("index.html", logged=session["logged"])
 
 
 # Home page
@@ -52,16 +52,16 @@ def profile():
         desc = render_template_string(f"What a cool user picture #{pic}") 
 
         if request.method == "GET":
-            return make_response(render_template("profile.html", logged=session["logged"], desc=desc, user=session))
+            return render_template("profile.html", logged=session["logged"], desc=desc, user=session)
 
         elif request.method == "POST":
             message = request.form.get("message")
 
             if message == "":
-                return make_response(render_template("profile.html", logged=session["logged"], desc=desc, user=session, post="empty"))
+                return render_template("profile.html", logged=session["logged"], desc=desc, user=session, post="empty")
             else:
                 session["messages"] = session["messages"] + [message] # bug on append not getting saved after each posts
-                return make_response(render_template("profile.html", logged=session["logged"], desc=desc, user=session))
+                return render_template("profile.html", logged=session["logged"], desc=desc, user=session)
     else:
         return redirect("/login", 302)
 
@@ -75,7 +75,7 @@ def login():
     if request.method == "GET" and session["logged"]:
         return redirect("/profile", 302)
     elif request.method == "GET":
-        return make_response(render_template("login.html"))
+        return render_template("login.html")
 
     elif request.method == "POST":
         username = request.form.get("username")
@@ -86,7 +86,7 @@ def login():
 
         # Check if not empty
         if username == "" or age == "" or sexe == "" or picture == "" or description == "":
-            return make_response(render_template("login.html", login="empty", logged=session["logged"]))
+            return render_template("login.html", login="empty", logged=session["logged"])
         else:
             session["logged"] = True
             session["username"] = username
@@ -108,7 +108,7 @@ def logout():
     session["picture"] = None
     session["description"] = None
     session["messages"] = None
-    return make_response(render_template("index.html", logged=session["logged"]))
+    return render_template("index.html", logged=session["logged"])
 
 
 # Backup

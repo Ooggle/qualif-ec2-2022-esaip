@@ -20,7 +20,7 @@ def robots():
 @app.route("/", methods=["GET"])
 def index():
     # Init
-    return make_response(render_template("index.html"))
+    return render_template("index.html")
 
 
 # Admin page
@@ -30,7 +30,7 @@ def admin():
     response = ""
 
     if request.method == "GET":
-        response = make_response(render_template("admin.html"))
+        response = render_template("admin.html")
 
     elif request.method == "POST":
         username = request.form.get("username")
@@ -38,8 +38,8 @@ def admin():
 
         # Verify crendentials
         if username == "part4" and password == "_C4n_B3_":
-            response = make_response(render_template("admin.html", login="flag"))
+            response = render_template("admin.html", login="flag")
         else:
-            response = make_response(render_template("admin.html", login="failure"))
+            response = render_template("admin.html", login="failure")
 
     return response

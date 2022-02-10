@@ -1,0 +1,24 @@
+{% include 'inc/header.html' %}
+<body>
+    {% include 'inc/navbar.html' %}
+    <form class="mgt-2 mgb-2" method="POST" enctype=multipart/form-data>
+        <input type=file name=file>
+        <button type="submit">Send</button>
+    </form>
+    <div class="container-small">
+        {% for i in range(len) %}
+            {% if i%3 == 0 %}
+                <div class="row">
+            {% endif %}
+                <div class="item">
+                    <p>{{pictures[i][0]}}</p>
+                    <img src="data:image/png;base64,{{pictures[i][1]}}" width="300px";/>
+                </div>
+            {% if i%3 == 2 %}
+                </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
