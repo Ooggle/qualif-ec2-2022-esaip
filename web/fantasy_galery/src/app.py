@@ -6,7 +6,6 @@ import sqlite3
 
 # Create the APP
 app = Flask(__name__)
-app.config["TEMPLATES_AUTO_RELOAD"] = True # Remove it in prod
 app.config["SECRET_KEY"] = urandom(16)
 
 

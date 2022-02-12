@@ -1,0 +1,24 @@
+{% include 'inc/header.html' %}
+<body>
+    {% include 'inc/navbar.html' %}
+	<p>You found a vulnerability on the website?</p>
+	<p class="mgb-1">Send us the vulnerable link, an admin check it out as soon as possible.</p>
+
+	<form method="post" action="">
+		<div>
+		<input class="mgb-1" type="text" name="url" placeholder="Link">
+		</div>
+		<button class="mgb-2" type="submit">Report</button>
+	</form>
+    <hr class="mgb-1">
+
+	{% if result == "done" %}
+	<p>Your request has been sent to an administrator, it will be check in 5 minutes max!</p>
+	{% elif result == "failed" %}
+    <p>You already made a request which is not treated yet, be patient pleases!</p>
+	{% elif result == "wrong" %}
+    <p>You must report an url!</p>
+	{% endif %}
+
+</body>
+</html>

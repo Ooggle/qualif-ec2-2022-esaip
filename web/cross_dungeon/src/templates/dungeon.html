@@ -1,0 +1,56 @@
+{% include 'inc/header.html' %}
+<body>
+    {% include 'inc/navbar.html' %}
+    <!-- https://codepen.io/dwidomski/pen/DegdPX -->
+    <div class="versus">
+        <div class="item">
+            <img id="link" class="personnage" src="{{ url_for('static', filename='images/zelda.png') }}"/>
+            <div id="battle" class="center"></div>
+            <img id="ganon" class="personnage rigth" src="{{ url_for('static', filename='images/ganon.png') }}"/>
+        </div>
+        <div class="item">
+            <div class="bar">
+                <div id="link_hit" class="hit"></div>
+                <div id="link_health" class="link-health"></div>
+            </div>
+            <div class="bar rigth">
+                <div id="ganon_hit" class="hit"></div>
+                <div id="ganon_health" class="enemy-health"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="line mgt-2 mgb-2"></div>
+
+    <div class="attack">
+        <div class="left_attack">
+            <p id="link_victory" class="mgb-0-5">Link victory: 0</p>
+            <p id="ganon_victory">Ganon victory: 0</p>
+        </div>
+        <div class="attack_type">
+            <div class="item_attack" style="margin-left: auto;">
+                <img class="center mgb-0-5" src="{{ url_for('static', filename='images/sword.png') }}" width="75px"/>
+                <button onclick="make_damage(30, 'Link', 'Sword')">Sword</button>
+            </div>
+            <div class="item_attack">
+                <img class="center mgb-0-5" src="{{ url_for('static', filename='images/shield.png') }}" width="75px"/>
+                <button onclick="make_damage(0, 'Link', 'Shield')">Shield</button>
+            </div>
+            <div class="item_attack" style="margin-right: auto;">
+                <img class="center mgb-0-5" src="{{ url_for('static', filename='images/potion.png') }}" width="75px"/>
+                <button onclick="make_damage(30, 'Link', 'Potion')">Potion</button>
+            </div>
+        </div>
+        <div class="right_attack">
+            <p class="mgb-0-5">Logs</p>
+            <p>XXX</p>
+            <p>XXX</p>
+            <p>XXX</p>
+            <p>XXX</p>
+            <p>XXX</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

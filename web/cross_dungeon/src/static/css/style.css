@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300&display=swap');
+
+/* Global pages settings */
+*, html, body, table, tr, td, frame { 
+    margin: 0;
+    padding: 0;
+}
+html, body { height: 100%;}
+
+body {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 20px;
+    line-height: 1.42857;
+    color: #FFEEAD;
+    background: #96CEB4;
+    height: calc(100vh - 82px);
+    position: relative;
+    padding: 82px 40px 0 40px !important;
+}
+
+::-moz-selection { color: white; background: #FFEEAD; }
+::selection { color: white; background: #FFEEAD; }
+
+/* a */
+a {color: #FFEEAD; text-decoration: none;}
+a:hover{ cursor: pointer;}
+a:hover, a:focus{  color: white}
+
+/* button */
+button {
+	background-color: #96CEB4;
+	border-radius: 6px;
+	border: 1px solid #FFEEAD;
+	cursor: pointer;
+	color: #FFEEAD;
+	font-weight: bold;
+	padding: 6px 24px;
+}
+button:hover {	background-color: white;
+    color: #96CEB4;
+    border: 1px solid #96CEB4;
+}
+
+fieldset { padding: 5px 10px; }
+fieldset legend { padding: 0 5px; }
+
+h1,p,legend,form,div { text-align: center; }
+
+/* i circle for images */
+i {
+    background: transparent;
+    border: 1px solid #FFEEAD;
+    border-radius: 20px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+/* input fields */
+input,textarea,select {
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid #FFEEAD;
+    color: #FFEEAD;
+	background-color: #96CEB4;
+    transition: 0.5s;
+}
+input,textarea,select:focus { outline: none; }
+select { width: 189px; }
+
+::placeholder {
+    color: #FFEEAD;
+    opacity: 1;
+}
+:-ms-input-placeholder { color: #FFEEAD; }
+::-ms-input-placeholder { color: #FFEEAD; }
+
+textarea {
+    width: 40%;
+    height: 150px;
+}
+
+/* Misc */
+.line{
+    width: 100%;
+    height: 5px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #FFEEAD;
+}
+
+/* Margin */
+.pb-1 { padding-bottom: 20px; }
+.mgt-1 { margin-top: 20px; }
+.mgb-0-5 { padding-bottom: 10px; }
+.mgt-2 { margin-top: 40px; }
+.mgb-1 { margin-bottom: 20px; }
+.mgb-2 { margin-bottom: 40px; }
+
+/* ** Dungeon ** */
+
+/* Versus */
+.versus {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    margin: auto;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.personnage {
+    width: 350px;
+}
+
+.rigth {
+    margin-left: auto;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+.victory {
+    padding-left: 50%;
+}
+
+#battle {
+    width: 100%;
+}
+
+/* Life bar */
+.bar {
+    background: rgba(255,255,255,0.6);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 350px;
+    height: 20px;
+    padding: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.enemy-health {
+    background: #c54;
+    width: 100%;
+    height: 10px;
+    position: relative;
+
+    transition: width .5s linear;
+}
+
+.link-health {
+    background: #778f3f;
+    width: 100%;
+    height: 10px;
+    position: relative;
+
+    transition: width .5s linear;
+}
+
+.hit {
+    background: black;
+    width: 95%;
+    height: 10px;
+    position: absolute;
+
+    transition: width .5s linear;
+}
+
+/* Attack button */
+
+.attack {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+}
+
+.attack_type {
+    display: flex;
+    width: 60%;
+    margin: auto;
+}
+
+.item_attack {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.right_attack {
+    width: 20%;
+    border-left: 1px solid #FFEEAD;
+}
+
+.left_attack {
+    width: 20%;
+    border-right: 1px solid #FFEEAD;
+    margin: auto;
+}

@@ -35,6 +35,6 @@
 # Web
 
 - Easy - My first treasure: R2Lille{Ch3Ak1NG_HTML_C4n_B3_r3Aly_1mp0rT3nT3}
-- 
+- Medium - Cross dungeon: R2Lille{}
 - Medium - Fantasy galery: R2Lille{SQL1_4r3_3v3ryWh3R3}
 - Hard - Fantasy book: R2Lille{SST1_4r3_Qu1T3_FUnn1_Fl3sK_L0v3RS}
