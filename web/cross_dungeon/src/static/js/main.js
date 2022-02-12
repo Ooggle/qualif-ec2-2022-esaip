@@ -48,18 +48,18 @@ var make_damage = (damage, from, type) => {
         // Animation
         if(from === "Link" && type === "Sword") {
             link.style.paddingLeft = "10%";
-            battle.innerHTML = '<img src="/static/images/green_damage.png">';
+            battle.innerHTML = '<img src="/static/images/green_damage.png" width="200px">';
         } else if(from === "Link" && type === "Shield") {
-            battle.innerHTML = '<img src="/static/images/green_damage.png">';
+            battle.innerHTML = '<img src="/static/images/green_shield.png" width="200px">';
         } else if(from === "Link" && type === "Potion") {
-            battle.innerHTML = '<img src="/static/images/green_heal.png">';
+            battle.innerHTML = '<img src="/static/images/green_heal.png" width="200px">';
         } else if(from == "Ganon" && type === "Sword") {
             ganon.style.paddingRight = "10%";
-            battle.innerHTML = '<img src="/static/images/red_damage.png">';
+            battle.innerHTML = '<img src="/static/images/red_damage.png" width="200px">';
         } else if(from === "Ganon" && type === "Shield") {
-            battle.innerHTML = '<img src="/static/images/red_damage.png">';
+            battle.innerHTML = '<img src="/static/images/red_shield.png" width="200px">';
         } else if(from === "Ganon" && type === "Potion") {
-            battle.innerHTML = '<img src="/static/images/red_heal.png">';
+            battle.innerHTML = '<img src="/static/images/red_heal.png" width="200px">';
         }
 
         // Current values
@@ -163,7 +163,7 @@ var make_damage = (damage, from, type) => {
             // ganon attack back
             if(from === "Link") {
                 setTimeout(() => {
-                    if(type === "Shield") {
+                    if(ganon_attack === "Shield") {
                         make_damage(0, "Ganon", ganon_attack);
                     } else {
                         make_damage(getRandomInt(100), "Ganon", ganon_attack);
