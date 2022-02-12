@@ -24,31 +24,25 @@
 
     <div class="attack">
         <div class="left_attack">
+            <p class="mgb-1">Score</p>
             <p id="link_victory" class="mgb-0-5">Link victory: 0</p>
             <p id="ganon_victory">Ganon victory: 0</p>
         </div>
         <div class="attack_type">
             <div class="item_attack" style="margin-left: auto;">
                 <img class="center mgb-0-5" src="{{ url_for('static', filename='images/sword.png') }}" width="75px"/>
-                <button onclick="make_damage(30, 'Link', 'Sword')">Sword</button>
+                <button onclick="make_damage('Link', 'Sword', 30)">Sword</button>
             </div>
             <div class="item_attack">
                 <img class="center mgb-0-5" src="{{ url_for('static', filename='images/shield.png') }}" width="75px"/>
-                <button onclick="make_damage(0, 'Link', 'Shield')">Shield</button>
+                <button onclick="make_damage('Link', 'Shield', 0)">Shield</button>
             </div>
             <div class="item_attack" style="margin-right: auto;">
-                <img class="center mgb-0-5" src="{{ url_for('static', filename='images/potion.png') }}" width="75px"/>
-                <button onclick="make_damage(30, 'Link', 'Potion')">Potion</button>
+                <img class="center mgb-1" src="{{ url_for('static', filename='images/potion.png') }}" width="75px"/>
+                <button onclick="make_damage('Link', 'Potion', 30)">Potion</button>
             </div>
         </div>
-        <div class="right_attack">
-            <p class="mgb-0-5">Logs</p>
-            <p>XXX</p>
-            <p>XXX</p>
-            <p>XXX</p>
-            <p>XXX</p>
-            <p>XXX</p>
-        </div>
+        <div id="logs" class="right_attack"><p class="mgb-0-5">Logs</p></div>
     </div>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>

@@ -185,12 +185,14 @@ textarea {
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 22%;
     margin: auto;
 }
 
 .attack_type {
     display: flex;
     width: 60%;
+    height: 100%;
     margin: auto;
 }
 
@@ -199,15 +201,23 @@ textarea {
     flex-direction: column;
     padding-left: 3%;
     padding-right: 3%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .right_attack {
     width: 20%;
+    height: 100%;
     border-left: 1px solid #FFEEAD;
 }
 
 .left_attack {
     width: 20%;
+    height: 100%;
     border-right: 1px solid #FFEEAD;
-    margin: auto;
+}
+
+#log {
+    text-align: left;
+    margin-left: 15%;
 }
