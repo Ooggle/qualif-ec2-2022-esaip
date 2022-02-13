@@ -189,7 +189,7 @@ var make_damage = (from, action, damage) => {
             // ganon attack back
             if(from === "Link") {
                 setTimeout(() => {
-                    if(ganon_attack === "Shield") {
+                    if(ganon_attack === "Shield" || action === "Shield") {
                         make_damage("Ganon", ganon_attack, 0);
                     } else {
                         make_damage("Ganon", ganon_attack, getRandomInt(100));
