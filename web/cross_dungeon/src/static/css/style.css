@@ -161,7 +161,7 @@ textarea {
     transition: width .5s linear;
 }
 
-.link-health {
+.user-health {
     background: #778f3f;
     width: 100%;
     height: 10px;

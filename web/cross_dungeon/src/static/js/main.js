@@ -11,23 +11,23 @@ var allow_attack = true;
 var ganon_action = ["Sword", "Shield", "Potion"];
 document.body.onload = function() {
     // Personnage
-    const link = document.getElementById("link");
+    const user = document.getElementById("user");
     const ganon = document.getElementById("enemy");
 
     // Animation zone
     var battle = document.getElementById("battle");
 
-    // link bar
-    const link_health = document.getElementById("link_health");
-    const link_hit = document.getElementById("link_hit");
+    // user bar
+    const user_health = document.getElementById("user_health");
+    const user_hit = document.getElementById("user_hit");
 
     // Enemy bar
     const ganon_health = document.getElementById("enemy_health");
     const ganon_hit = document.getElementById("enemy_hit");
 
     // Score
-    const ganon_victory = document.getElementById("link_victory");
-    const link_victory = document.getElementById("link_victory");
+    const ganon_victory = document.getElementById("user_victory");
+    const user_victory = document.getElementById("user_victory");
 
     // Logs
     const logs = document.getElementById("logs");
@@ -44,22 +44,27 @@ var add_logs = (from, action, damage) => {
         document.querySelectorAll("#log")[0].remove()
     };
     if(action === "Sword") {
-        logs.innerHTML += `<p id="log">[${from}] ${action} -${damage}PV</p>`
+        logs.innerHTML += `\n<p id="log">[User] ${action} -${damage}PV</p>`
     } else if(action === "Shield") {
-        logs.innerHTML += `<p id="log">[${from}] ${action}</p>`
+        logs.innerHTML += `<p id="log">[User] ${action}</p>`
     } else if(action === "Potion") {
-        logs.innerHTML += `<p id="log">[${from}] ${action} +${damage}</p>`
+        logs.innerHTML += `<p id="log">[User] ${action} +${damage}</p>`
     } else if(action === "Reset") {
-        logs.innerHTML += `<p id="log">[${from}] ${action}</p>`
+        logs.innerHTML += `<p id="log">[User] ${action}</p>`
     }
 };
 
 var make_damage = (from, action, damage) => {
+    // Sanitize the input
+    from = unescape(from);
+    action = unescape(action);
+    damage = unescape(damage);
+
     // Select ganon action
-    if(from === "Link") {
+    if(from !== "Ganon") {
         ganon_attack = ganon_action[getRandomInt(3)];
     };
-    if(from === "Link" && action === "Sword" && ganon_attack === "Shield") {
+    if(from !== "Ganon" && action === "Sword" && ganon_attack === "Shield") {
         damage = 0;
     }
 
@@ -72,12 +77,12 @@ var make_damage = (from, action, damage) => {
         add_logs(from, action, damage);
 
         // Animation
-        if(from === "Link" && action === "Sword") {
-            link.style.paddingLeft = "10%";
+        if(from !== "Ganon" && action === "Sword") {
+            user.style.paddingLeft = "10%";
             battle.innerHTML = '<img src="/static/images/green_damage.png" width="200px">';
-        } else if(from === "Link" && action === "Shield") {
+        } else if(from !== "Ganon" && action === "Shield") {
             battle.innerHTML = '<img src="/static/images/green_shield.png" width="200px">';
-        } else if(from === "Link" && action === "Potion") {
+        } else if(from !== "Ganon" && action === "Potion") {
             battle.innerHTML = '<img src="/static/images/green_heal.png" width="200px">';
         } else if(from == "Ganon" && action === "Sword") {
             ganon.style.paddingRight = "10%";
@@ -90,12 +95,12 @@ var make_damage = (from, action, damage) => {
 
         // Current values
         // Health
-        if(from === "Link" && action !== "Potion") {
+        if(from !== "Ganon" && action !== "Potion") {
             var current_health = ganon_health.style.width;
-        } else if(from === "Link" && action === "Potion") {
-            var current_health = link_health.style.width;
+        } else if(from !== "Ganon" && action === "Potion") {
+            var current_health = user_health.style.width;
         } else if(from === "Ganon" && action !== "Potion") {
-            var current_health = link_health.style.width;
+            var current_health = user_health.style.width;
         } else if(from === "Ganon" && action === "Potion") {
             var current_health = ganon_health.style.width;
         };
@@ -103,12 +108,12 @@ var make_damage = (from, action, damage) => {
             current_health = "100%";
         };
         // Hit
-        if(from === "Link" && action !== "Potion") {
+        if(from !== "Ganon" && action !== "Potion") {
             var current_hit = ganon_hit.style.width;
-        } else if(from === "Link" && action === "Potion") {
-            var current_hit = link_hit.style.width;
+        } else if(from !== "Ganon" && action === "Potion") {
+            var current_hit = user_hit.style.width;
         } else if(from === "Ganon" && action !== "Potion") {
-            var current_hit = link_hit.style.width;
+            var current_hit = user_hit.style.width;
         } else if(from === "Ganon" && action === "Potion") {
             var current_hit = ganon_hit.style.width;
         };
@@ -118,11 +123,11 @@ var make_damage = (from, action, damage) => {
 
         // Compute values
         if(action !== "Potion") {
-            var new_health = parseInt(current_health) - damage;
-            var new_hit = parseInt(current_hit) - damage;
+            var new_health = parseInt(current_health) - parseInt(damage);
+            var new_hit = parseInt(current_hit) - parseInt(damage);
         } else {
-            var new_health = parseInt(current_health) + damage;
-            var new_hit = parseInt(current_hit) + damage;
+            var new_health = parseInt(current_health) + parseInt(damage);
+            var new_hit = parseInt(current_hit) + parseInt(damage);
         }
         if(new_health < 0) {
             new_health = "0%";
@@ -138,14 +143,14 @@ var make_damage = (from, action, damage) => {
         // Update
         //Health
         if(action !== "Potion"){
-            if(from === "Link") {
+            if(from !== "Ganon") {
                 ganon_health.style.width = new_health
             } else if(from === "Ganon") {
-                link_health.style.width = new_health
+                user_health.style.width = new_health
             }; 
         } else {
-            if(from === "Link") {
-                link_hit.style.width = new_hit
+            if(from !== "Ganon") {
+                user_hit.style.width = new_hit
             } else if(from === "Ganon") {
                 ganon_hit.style.width = new_hit
             }; 
@@ -154,14 +159,14 @@ var make_damage = (from, action, damage) => {
         setTimeout(() => {
             // Hit
             if(action !== "Potion"){
-                if(from === "Link") {
+                if(from !== "Ganon") {
                     ganon_hit.style.width = new_hit
                 } else if(from === "Ganon") {
-                    link_hit.style.width = new_hit
+                    user_hit.style.width = new_hit
                 }; 
             } else {
-                if(from === "Link") {
-                    link_health.style.width = new_health
+                if(from !== "Ganon") {
+                    user_health.style.width = new_health
                 } else if(from === "Ganon") {
                     ganon_health.style.width = new_health
                 }; 
@@ -169,25 +174,25 @@ var make_damage = (from, action, damage) => {
 
             // Remove animation
             ganon.style.paddingRight = "0%";
-            link.style.paddingLeft = "0%";
+            user.style.paddingLeft = "0%";
 
             // Check for victory
             if (new_health === "0%") {
                 battle.innerHTML = `<p class="mgb-0-5">${from} win the battle!</p>
                 <button id="btn-reset" onclick="reset()">reset</button>`;
-                if(from === "Link") {
-                    link_victory.innerHTML = `Link victory: ${parseInt(link_victory.innerHTML.split(" ")[2]) + 1}`;
+                if(from !== "Ganon") {
+                    user_victory.innerText = `${from} victory: ${parseInt(user_victory.innerHTML.split(" ")[2]) + 1}`;
                 } else if(from === "Ganon") {
-                    ganon_victory.innerHTML = `Ganon victory: ${parseInt(ganon_victory.innerHTML.split(" ")[2]) + 1}`;
+                    ganon_victory.innerText = `Ganon victory: ${parseInt(ganon_victory.innerHTML.split(" ")[2]) + 1}`;
                 }; 
                 allow_attack = false;
                 return
             } else {
-                battle.innerHTML = ""
+                battle.innerText = ""
             }
 
             // ganon attack back
-            if(from === "Link") {
+            if(from !== "Ganon") {
                 setTimeout(() => {
                     if(ganon_attack === "Shield" || action === "Shield") {
                         make_damage("Ganon", ganon_attack, 0);
@@ -197,7 +202,7 @@ var make_damage = (from, action, damage) => {
 
                     allow_attack = true;
                 }, 500);
-            } else if(from === "Link" && action === "Shield") {
+            } else if(from !== "Ganon" && action === "Shield") {
                 allow_attack = true;
             };
         }, 500);
@@ -209,12 +214,12 @@ var reset = () => {
     add_logs("Info", "Reset", "");
     // Reset
     allow_attack = true;
-    battle.innerHTML = ""
+    battle.innerText = ""
     ganon_hit.style.width = "95%";
-    link_hit.style.width = "95%";
+    user_hit.style.width = "95%";
     // Animation
     setTimeout(() => {
         ganon_health.style.width = "100%";
-        link_health.style.width = "100%";
+        user_health.style.width = "100%";
     }, 500);
 };

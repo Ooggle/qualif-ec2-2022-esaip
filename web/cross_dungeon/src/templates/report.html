@@ -3,6 +3,7 @@
     {% include 'inc/navbar.html' %}
 	<p>You found a vulnerability on the website?</p>
 	<p class="mgb-1">Send us the vulnerable link, an admin check it out as soon as possible.</p>
+	<p class="mgb-1">PS: the admin love potion and always take one of them when verifying the vulnerability.</p>
 
 	<form method="post" action="">
 		<div>
@@ -10,7 +11,7 @@
 		</div>
 		<button class="mgb-2" type="submit">Report</button>
 	</form>
-    <hr class="mgb-1">
+    <div class="line"></div>
 
 	{% if result == "done" %}
 	<p>Your request has been sent to an administrator, it will be check in 5 minutes max!</p>

@@ -4,14 +4,14 @@
     <!-- https://codepen.io/dwidomski/pen/DegdPX -->
     <div class="versus">
         <div class="item">
-            <img id="link" class="personnage" src="{{ url_for('static', filename='images/zelda.png') }}"/>
+            <img id="user" class="personnage" src="{{ url_for('static', filename='images/zelda.png') }}"/>
             <div id="battle" class="center"></div>
             <img id="ganon" class="personnage rigth" src="{{ url_for('static', filename='images/ganon.png') }}"/>
         </div>
         <div class="item">
             <div class="bar">
-                <div id="link_hit" class="hit"></div>
-                <div id="link_health" class="link-health"></div>
+                <div id="user_hit" class="hit"></div>
+                <div id="user_health" class="user-health"></div>
             </div>
             <div class="bar rigth">
                 <div id="ganon_hit" class="hit"></div>
@@ -25,21 +25,21 @@
     <div class="attack">
         <div class="left_attack">
             <p class="mgb-1">Score</p>
-            <p id="link_victory" class="mgb-0-5">Link victory: 0</p>
+            <p id="user_victory" class="mgb-0-5">User victory: 0</p>
             <p id="ganon_victory">Ganon victory: 0</p>
         </div>
         <div class="attack_type">
             <div class="item_attack" style="margin-left: auto;">
                 <img class="center mgb-0-5" src="{{ url_for('static', filename='images/sword.png') }}" width="75px"/>
-                <button onclick="make_damage('Link', 'Sword', 30)">Sword</button>
+                <button onclick="make_damage('{{username}}', 'Sword', '{{damage}}')">Sword</button>
             </div>
             <div class="item_attack">
                 <img class="center mgb-0-5" src="{{ url_for('static', filename='images/shield.png') }}" width="75px"/>
-                <button onclick="make_damage('Link', 'Shield', 0)">Shield</button>
+                <button onclick="make_damage('{{username}}', 'Shield', 0)">Shield</button>
             </div>
             <div class="item_attack" style="margin-right: auto;">
                 <img class="center mgb-1" src="{{ url_for('static', filename='images/potion.png') }}" width="75px"/>
-                <button onclick="make_damage('Link', 'Potion', 30)">Potion</button>
+                <button onclick="make_damage('{{username}}', 'Potion', '{{damage}}')">Potion</button>
             </div>
         </div>
         <div id="logs" class="right_attack"><p class="mgb-0-5">Logs</p></div>
