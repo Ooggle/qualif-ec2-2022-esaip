@@ -39,7 +39,7 @@
             </div>
             <div class="item_attack" style="margin-right: auto;">
                 <img class="center mgb-1" src="{{ url_for('static', filename='images/potion.png') }}" width="75px"/>
-                <button onclick="make_damage('{{username}}', 'Potion', '{{damage}}')">Potion</button>
+                <button id="potion" onclick="make_damage('{{username}}', 'Potion', '{{damage}}')">Potion</button>
             </div>
         </div>
         <div id="logs" class="right_attack"><p class="mgb-0-5">Logs</p></div>

@@ -1,4 +1,4 @@
 CREATE TABLE IF NOT EXISTS report (
-    id INTEGER NOT NULL UNIQUE,
+    session TEXT NOT NULL UNIQUE,
     url TEXT NOT NULL
 );

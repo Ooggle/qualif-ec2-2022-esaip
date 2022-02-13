@@ -55,8 +55,8 @@ def report():
     cur = db.cursor()
 
     # Check session ID
-    if "id" not in session:
-        session["id"] = 11
+    if "session" not in session:
+        session["session"] = 11
 
     if request.method == "GET":
         # Generating response
@@ -64,7 +64,7 @@ def report():
 
     elif request.method == "POST":
         # Checking if session ID already in the BDD
-        presence = cur.execute(f"SELECT id FROM report WHERE id={session['id']}").fetchall()
+        presence = cur.execute(f"SELECT session FROM report WHERE session={session['session']}").fetchall()
 
         if len(presence) >= 1:
             response = make_response(render_template("report.html", result="failed"))
@@ -73,8 +73,8 @@ def report():
             url = request.form.get("url")
 
             # Check if valid url have been sent
-            if url[:22] == "http://localhost:5000/":
-                cur.execute("INSERT INTO report VALUES (?, ?);", (session["id"], url))
+            if url[:17] == "http://localhost/":
+                cur.execute("INSERT INTO report VALUES (?, ?);", (session["session"], url))
                 db.commit()
 
                 # Generating response

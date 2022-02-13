@@ -7,12 +7,13 @@
 # Forensic
 
 - Easy - My first network analysis: R2Lille{w1r35h4rk_15_my_G00d_fr13nd}
-- 
+- Suite de chall avec dump memoire ? Comme ca on par sur un peu d'OSINT github pour la partie OSINT de l'EC2
 - 
 
 # Programmation
 
 - Easy - Easy: R2Lille{Th3_Gr34t3ST_Sh0P}
+- On peut en faire encore 2 mais sur de la big data pour l'IA
 
 # Pwn
 
@@ -24,13 +25,13 @@
 
 - Easy - Chest security software: R2Lille{Str1nG5_Th3_f1l3,_G3T_7h3_fl4G}
 - Medium - Super secret passphrase: R2Lille{h3r3_1S_7h3_fl4g!!}
--
+- 
 
 # Steganography
 
 - Easy - My first colored temple: R2Lille{010100010101001001000011010011110100010001000101}
--
--
+- 
+- 
 
 # Web
 
@@ -38,3 +39,9 @@
 - Medium - Cross dungeon: R2Lille{1NN3R_HTML_t0_XSS_3AzYYY}
 - Medium - Fantasy galery: R2Lille{SQL1_4r3_3v3ryWh3R3}
 - Hard - Fantasy book: R2Lille{SST1_4r3_Qu1T3_FUnn1_Fl3sK_L0v3RS}
+
+# Misc
+
+- Very easy: R2Lille{S4niTY_Ch3cK}
+- 2 petit challs chill
+- 
