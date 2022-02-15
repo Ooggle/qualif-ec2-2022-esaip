@@ -62,4 +62,4 @@ async function main() {
 };
 
 // Start routine
-setInterval(main, 200);
+setInterval(main, 20000);

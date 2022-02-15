@@ -23,8 +23,8 @@ ADD ./src .
 RUN sqlite3 sqlite.db < init.sql; \
     python -m pip install -r requirements.txt;
 
-# Start bot
-RUN /bin/node /usr/app/bot/client_bot.js &
+# Copy sh startup script
+COPY start.sh /start.sh
 
-# Start flask srv on any local IP
-CMD [ "flask", "run", "--host=0.0.0.0", "--port=80" ]
+# Start the challenge
+CMD /start.sh
