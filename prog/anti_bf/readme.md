@@ -1,4 +1,4 @@
-# XXX
+# Anti BF
 
 <br>
 
@@ -8,7 +8,7 @@
 
 <br>
 
-**Level**: Easy
+**Level**: Medium
 
 **Files**: ...
 

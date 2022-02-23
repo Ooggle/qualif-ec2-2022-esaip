@@ -19,7 +19,6 @@ def robots():
 # Home page
 @app.route("/", methods=["GET"])
 def index():
-    # Init
     return render_template("index.html")
 
 

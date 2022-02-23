@@ -1,0 +1,11 @@
+{% include 'inc/header.html' %}
+<body>
+    {% include 'inc/navbar.html' %}
+    <div class="mgb-2"><i><img id="alert" src="{{ url_for('static', filename='images/key.png') }}" width="140"/></i><div>
+    <p class="mgt-2 mgb-1"> Welcome Adventurer! </p>
+    <p> I have created this website as a little demonstration of secure login! </p>
+    <p>As you can see, even having my password wordlist it is impossible to brute force my admin account when using captcha! </p>
+    <p class="mgb-1"> Password wordlist: /wordlist </p>
+    <p> Good luck! </p>
+</body>
+</html>
