@@ -14,7 +14,7 @@
 
 - Easy - Hyrule Shop: R2Lille{Th3_Gr34t3ST_Sh0P}
 - Medium - Anti BF: R2Lille{C4pTCh4_4r3_N0t_3n0uGh}
-- 
+- Hard - Cat || Dog: R2Lille{D0g_0R_c4T_Th4T_1s_Th3_1A_Qu3St10N}
 
 # Pwn
 
