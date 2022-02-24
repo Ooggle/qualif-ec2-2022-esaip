@@ -12,7 +12,7 @@
 
 # Programmation
 
-- Easy - Easy: R2Lille{Th3_Gr34t3ST_Sh0P}
+- Easy - Hyrule Shop: R2Lille{Th3_Gr34t3ST_Sh0P}
 - Medium - Anti BF: R2Lille{C4pTCh4_4r3_N0t_3n0uGh}
 - 
 
@@ -31,8 +31,7 @@
 # Steganography
 
 - Easy - My first colored temple: R2Lille{010100010101001001000011010011110100010001000101}
-- 
-- 
+- Medium - Perfect Sound Box: R2Lille{P3rF3cT_S0UnD}
 
 # Web
 
@@ -45,4 +44,3 @@
 
 - Very easy: R2Lille{S4niTY_Ch3cK}
 - easy - Cya Veran Epona: R2Lille{2021-4034}
-- 
