@@ -32,6 +32,7 @@
 
 - Easy - My first colored temple: R2Lille{010100010101001001000011010011110100010001000101}
 - Medium - Perfect Sound Box: R2Lille{P3rF3cT_S0UnD}
+- Medium - Mystic chest: R2Lille{My_Pr3c10uS}
 
 # Web
 
