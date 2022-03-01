@@ -1,17 +1,11 @@
-# XXX
-
-<br>
-
-## Description
-
 
 
 <br>
 
 **Level**: Easy
 
-**Files**: ...
+**Connection:** nc {{domain}} {{port}}
 
-**Points**: XX points
+**Points**: 50 points
 
 **Author**: Mizu

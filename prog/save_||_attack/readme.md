@@ -1,17 +1,11 @@
-# Save || Attack
-
-<br>
-
-## Description
-
 
 
 <br>
 
 **Level**: Hard
 
-**Files**: ...
+**Connection:** nc {{domain}} {{port}}
 
-**Points**: XX points
+**Points**: 200 points
 
 **Author**: Mizu

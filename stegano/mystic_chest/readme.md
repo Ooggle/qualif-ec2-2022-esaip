@@ -1,17 +1,9 @@
-# 
-
-<br>
-
-## Description
-
 
 
 <br>
 
 **Level:** Medium
 
-**File:** 
-
-**Points:** XX points
+**Points:** 100 points
 
 **Author:** Mizu

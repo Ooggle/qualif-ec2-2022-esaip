@@ -1,8 +1,3 @@
-# My first colored temple
-
-<br>
-
-## Description
 
 
 
@@ -12,6 +7,6 @@
 
 **Files**: hell_painting.png
 
-**Points**: XX points
+**Points**: 50 points
 
 **Author**: Mizu, Ooggle

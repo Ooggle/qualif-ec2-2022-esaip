@@ -43,5 +43,5 @@
 
 # Misc
 
-- Very easy: R2Lille{S4niTY_Ch3cK}
+- Very easy: Sanity Check: R2Lille{S4niTY_Ch3cK}
 - easy - Cya Veran Epona: R2Lille{2021-4034}

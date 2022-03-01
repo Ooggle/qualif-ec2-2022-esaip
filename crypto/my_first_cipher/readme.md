@@ -1,9 +1,3 @@
-# My first cipher
-
-<br>
-
-## Description
-
 Link decided to learn crypto to lock is rupees room. Obviously, he made some mistakes, help him find the vulnerability to open the door.
 
 PS: He used the following command to get cipher.txt
@@ -16,8 +10,6 @@ python run.py -c clear_text.txt -o flag.enc
 
 **Level:** Easy
 
-**URL:** http://{{domain}:{{port}}
-
-**Points:** XX points
+**Points:** 50 points
 
 **Author:** Mizu

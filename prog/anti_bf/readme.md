@@ -1,17 +1,11 @@
-# Anti BF
-
-<br>
-
-## Description
-
 
 
 <br>
 
 **Level**: Medium
 
-**Files**: ...
+**Connection:** nc {{domain}} {{port}}
 
-**Points**: XX points
+**Points**: 100 points
 
 **Author**: Mizu
