@@ -1,0 +1,83 @@
+{
+    "web 1" : {
+        "images" : [
+            {
+                "name" : "web-easy",
+                "local_ports": ["8080"],
+                "variables": [""]
+            },
+            {
+                "name" : "web-medium2",
+                "local_ports": ["80"],
+                "variables": [""]
+            }
+        ],
+        "exposed_ports": ["8080", "80"]
+    },
+
+    "web 2" : {
+        "images" : [{
+            "name" : "web-medium1",
+            "local_ports": ["80"],
+            "variables": [""]
+        }],
+        "exposed_ports": ["80"]
+    },
+
+    "web 3" : {
+        "images" : [{
+            "name" : "web-hard",
+            "local_ports": ["80"],
+            "variables": [""]
+        }],
+        "exposed_ports": ["80"]
+    },
+
+    "pwn + crypto" : {
+        "images" : [
+            {
+                "name" : "pwn-easy",
+                "local_ports": ["55555"],
+                "variables": [""]
+            },
+            {
+                "name" : "pwn-medium",
+                "local_ports": ["55556"],
+                "variables": [""]
+            },
+            {
+                "name" : "crypto-hard",
+                "local_ports": ["55557"],
+                "variables": [""]
+            }
+        ],
+        "exposed_ports": ["55555", "55556", "55557"]
+    },
+
+    "prog 1" : {
+        "images" : [{
+            "name" : "dev-easy",
+            "local_ports": ["55555"],
+            "variables": [""]
+        }],
+        "exposed_ports": ["55555"]
+    },
+
+    "prog 2" : {
+        "images" : [{
+            "name" : "dev-medium",
+            "local_ports": ["80"],
+            "variables": [""]
+        }],
+        "exposed_ports": ["80"]
+    },
+
+    "prog 3" : {
+        "images" : [{
+            "name" : "dev-hard",
+            "local_ports": ["55555"],
+            "variables": [""]
+        }],
+        "exposed_ports": ["55555"]
+    }
+}
