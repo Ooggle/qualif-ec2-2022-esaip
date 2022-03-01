@@ -43,6 +43,7 @@ int main()
             printf("%s", line);
         }
         fclose(textfile);
+        fflush(stdout);
     }
     else
     {

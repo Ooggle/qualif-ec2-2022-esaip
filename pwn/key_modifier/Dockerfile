@@ -15,6 +15,6 @@ RUN chmod +x /start.sh
 RUN chown -R root:ctf /home/ctf && \
     chmod -R 750 /home/ctf
 
-EXPOSE 55555
+EXPOSE 55556
 
 ENTRYPOINT ["/start.sh"]
