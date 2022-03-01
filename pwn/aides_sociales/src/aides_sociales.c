@@ -1,3 +1,4 @@
+// gcc aides_sociales.c -o challenge
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -10,6 +11,7 @@ int main()
 
     // get deposit from input and sanitize it
     printf("[INPUT] How much do you want to deposit: ");
+    fflush(stdout);
     char buf[20] = {0};
     fgets(buf, 20, stdin);
     int deposit = atoi(buf);
@@ -17,12 +19,14 @@ int main()
     if(deposit < 1)
     {
         printf("[ERROR] Wrong input, you can only deposit a positive integer!\n");
+        fflush(stdout);
         return -1;
     }
 
     // Some pretty clever trick to reduce space in memory
     unsigned short new_balance = balance + deposit;
     printf("\n[INFO] Your balance is now %d.\n", new_balance);
+    fflush(stdout);
 
     if(new_balance < 10)
     {
@@ -43,6 +47,7 @@ int main()
     else
     {
         printf("[INFO] This is way too much! You can't have the bonus rupees.\n");
+        fflush(stdout);
     }
 
     return 0;
