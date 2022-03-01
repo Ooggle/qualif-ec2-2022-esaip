@@ -20,15 +20,15 @@
 
 # Pwn
 
-- Easy - Easy: R2Lille{r3pl4c3_uS1nG_0v3rfl0w}
-- Medium - Aides sociales: R2Lille{1n7_0v3rfl0w_15_51mpl3_bu7_c00l}
+- Easy - Aides sociales: R2Lille{1n7_0v3rfl0w_15_51mpl3_bu7_c00l}
+- Medium - Key Modifier: R2Lille{r3pl4c3_uS1nG_0v3rfl0w}
 - 
 
 # Reverse
 
 - Easy - Chest security software: R2Lille{Str1nG5_Th3_f1l3,_G3T_7h3_fl4G}
 - Medium - Super secret passphrase: R2Lille{h3r3_1S_7h3_fl4g!!}
-- 
+- Hard - Super Crypto System: R2Lille{5up3r_x0r1ng_5y573m}
 
 # Steganography
 

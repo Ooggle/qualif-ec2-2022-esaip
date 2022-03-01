@@ -4,7 +4,7 @@ Try to lower your balance and trick the system!
 
 <br>
 
-**Level**: Medium
+**Level**: Easy
 
 **Connection**: `nc <ip> <port>`
 

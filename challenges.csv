@@ -1,0 +1,175 @@
+id,name,description,category,value,type,state,max_attempts,flags,type_data
+1,Cya Veran Epona,"Link is searching for a specific Cya Veran Epona vulnerability ID can you help him finding the one matching the following description ?
+
+""It has been declared at the end of 2021 in the Hyrule field, but seems that was possible to exploit it since 2009. The vulnerability allows a monster to LPE to root user using few lines of code. It has a score of 7.8 and impact almost all Linux distribution.""
+
+<br>
+
+**Level**: Easy
+
+**Format**: R2Lille{ID}
+
+**Author**: Mizu
+",Misc,50,dynamic,hidden,0,R2Lille{2021-4034},"{""initial"":50, ""minimum"":10, ""decay"":25}"
+3,My first colored temple,"<br>
+
+**Level**: Easy
+
+**Author**: Mizu, Ooggle",Steganography,50,dynamic,hidden,0,R2Lille{010100010101001001000011010011110100010001000101},"{""initial"":50, ""minimum"":10, ""decay"":25}"
+4,Perfect Sound Box,"In his conquest of the fire temple, Link found a weird sound box in a chest.
+
+Help him to find what it is hidding!
+
+<br>
+
+**Level:** Medium
+
+**Author:** Mizu
+",Steganography,100,dynamic,hidden,0,R2Lille{P3rF3cT_S0UnD},"{""initial"":100, ""minimum"":20, ""decay"":25}"
+5,Mystic chest,"
+<br>
+
+**Level:** Medium
+
+**Author:** Mizu
+",Steganography,100,dynamic,hidden,0,R2Lille{My_Pr3c10uS},"{""initial"":100, ""minimum"":20, ""decay"":25}"
+6,Chest flipping,"After getting robbed two time in row, link decided to use the modern AES cipher to secure is rupees chest. He said that using it, opening his chest became impossible. Prove the oposite one last time and open the chest.
+
+<br>
+
+**Level:** Hard
+
+**Author:** Mizu
+",Cryptography,200,dynamic,hidden,0,R2Lille{Fl1P_Th4t_FuCK1nG_cH3ST},"{""initial"":200, ""minimum"":40, ""decay"":25}"
+7,ROX my cipher,"After his first failure while creating his cipher, Link decide to create a new one that must be undefeatable. Prove the oposite and open the door again.
+
+PS: He used the following command to get cipher.txt
+
+```sh
+python run.py -c clear_text.txt -o flag.enc
+```
+
+<br>
+
+**Level:** Medium
+
+**Author:** Mizu
+",Cryptography,100,dynamic,hidden,0,R2Lille{B4S1c_Asc11_M0duL0_1s_Us3l3ss_0n_X0R},"{""initial"":100, ""minimum"":20, ""decay"":25}"
+8,My first cipher,"Link decided to learn crypto to lock is rupees room. Obviously, he made some mistakes, help him find the vulnerability to open the door.
+
+PS: He used the following command to get cipher.txt
+
+```sh
+python run.py -c clear_text.txt -o flag.enc
+```
+
+<br>
+
+**Level:** Easy
+
+**Author:** Mizu
+",Cryptography,50,dynamic,hidden,0,R2Lille{4V3_C3s4r},"{""initial"":50, ""minimum"":10, ""decay"":25}"
+9,Sanity Check,R2Lille{S4niTY_Ch3cK},Misc,1,standard,hidden,0,R2Lille{S4niTY_Ch3cK},
+10,Hyrule Shop,"A new shop has opened in the Hyrule fields!
+
+Talking with the vendor, He asked you to help him to handle 100 of his clients for an incredible gift!
+
+<br>
+
+**Level**: Easy
+
+**Author**: Mizu
+",Programming,50,dynamic,hidden,0,R2Lille{Th3_Gr34t3ST_Sh0P},"{""initial"":50, ""minimum"":10, ""decay"":25}"
+11,Anti BF,"<br>
+
+**Level**: Medium
+
+**Author**: Mizu
+",Programming,100,dynamic,hidden,0,R2Lille{C4pTCh4_4r3_N0t_3n0uGh},"{""initial"":100, ""minimum"":20, ""decay"":25}"
+13,Save || Attack,"<br>
+
+**Level**: Hard
+
+**Author**: Mizu
+",Programming,200,dynamic,hidden,0,R2Lille{4lly_0R_3n3my_Th4T_1s_Th3_1A_Qu3St10N},"{""initial"":200, ""minimum"":40, ""decay"":25}"
+14,Aides Sociales,"Link is going to deposit some rupees in his bank account. A system message is saying that you can get bonus rupees if your balance is lower that 10 rupees.
+
+Try to lower your balance and trick the system!
+
+<br>
+
+**Level**: Medium
+
+**Author**: Ooggle
+",Pwn,100,dynamic,hidden,0,R2Lille{1n7_0v3rfl0w_15_51mpl3_bu7_c00l},"{""initial"":100, ""minimum"":20, ""decay"":25}"
+15,My first treasure,"Searching for some rupees, Link found a website that is hiding a treasure. Find a way to open it!
+
+<br>
+
+**Level:** Easy
+
+**Author:** Mizu
+",Web,50,dynamic,hidden,0,R2Lille{Ch3Ak1NG_HTML_C4n_B3_r3Aly_1mp0rT3nT3},"{""initial"":50, ""minimum"":10, ""decay"":25}"
+16,Cross dungeon,"
+<br>
+
+**Level:** Medium
+
+**Author:** Mizu
+",Web,100,dynamic,hidden,0,R2Lille{1NN3R_HTML_t0_XSS_3AzYYY},"{""initial"":100, ""minimum"":20, ""decay"":25}"
+17,Fantasy galery,"A new website as been create to manage a galery. Link was wanted to use it in order to store is beautifull landscape pictures, but before He asked you to check the site security. Can you help him verifying it?
+
+<br>
+
+**Level:** Medium
+
+**Author:** Mizu
+",Web,100,dynamic,hidden,0,R2Lille{SQL1_4r3_3v3ryWh3R3},"{""initial"":100, ""minimum"":20, ""decay"":25}"
+18,Fantasy book,"
+<br>
+
+**Level:** Hard
+
+**Author:** Mizu
+",Web,200,dynamic,hidden,0,R2Lille{SST1_4r3_Qu1T3_FUnn1_Fl3sK_L0v3RS},"{""initial"":200, ""minimum"":40, ""decay"":25}"
+19,Key Modifier,"Link is going to deposit some rupees in his bank account. A system message is saying that you can get bonus rupees if your balance is lower that 10 rupees.
+
+Try to lower your balance and trick the system!
+
+<br>
+
+**Level**: Medium
+
+**Author**: Ooggle",Pwn,100,dynamic,hidden,0,R2Lille{r3pl4c3_uS1nG_0v3rfl0w},"{""initial"":100, ""minimum"":20, ""decay"":25}"
+20,Chest Security Software,"Link Forgot the password of his secret rupees chest, but it seems that the software used to ask the password stores it in a very simple way.
+
+Try to find the password of link's secret chest!
+
+<br>
+
+**Level**: Easy
+
+**Author**: Ooggle",Reverse,50,dynamic,hidden,0,"R2Lille{Str1nG5_Th3_f1l3,_G3T_7h3_fl4G}","{""initial"":50, ""minimum"":10, ""decay"":25}"
+21,Super secret passphrase,"This time, you want to break a new super secure system in order to get the password. As the hero of the triforce, this will not be that difficult, right ? ;)
+
+<br>
+
+**Level**: Medium
+
+**Author**: Ooggle",Reverse,100,dynamic,hidden,0,R2Lille{h3r3_1S_7h3_fl4g!!},"{""initial"":100, ""minimum"":20, ""decay"":25}"
+22,Super Crypto System,"This is a slightly improved version of the first secret rupees chest. You need to get the password again! Of course this is a different one from earlier.
+
+<br>
+
+**Level**: Medium
+
+**Author**: Ooggle",Reverse,200,dynamic,hidden,0,R2Lille{5up3r_x0r1ng_5y573m},"{""initial"":100, ""minimum"":20, ""decay"":25}"
+23,My first network analysis,"Hey link! Someone has exfiltrated data from your computer via a web server!
+
+Found what did this person has stole from Link to get the flag.
+
+<br>
+
+**Level**: Easy
+
+**Author**: Ooggle",Forensic,50,dynamic,hidden,0,R2Lille{w1r35h4rk_15_my_G00d_fr13nd},"{""initial"":50, ""minimum"":10, ""decay"":25}"
