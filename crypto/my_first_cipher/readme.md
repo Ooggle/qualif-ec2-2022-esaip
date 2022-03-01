@@ -10,6 +10,4 @@ python run.py -c clear_text.txt -o flag.enc
 
 **Level:** Easy
 
-**Points:** 50 points
-
 **Author:** Mizu

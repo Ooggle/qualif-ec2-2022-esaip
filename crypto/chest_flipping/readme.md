@@ -5,7 +5,4 @@ After getting robbed two time in row, link decided to use the modern AES cipher 
 **Level:** Easy
 
 **Connection:** nc {{domain}} {{port}}
-
-**Points:** 50 points
-
 **Author:** Mizu

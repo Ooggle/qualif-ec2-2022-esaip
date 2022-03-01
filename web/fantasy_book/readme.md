@@ -1,17 +1,7 @@
-# Fantasy book
-
-<br>
-
-## Description
-
 
 
 <br>
 
-**Level:** ???
-
-**URL:** http://{{domain}:{{port}}
-
-**Points:** XX points
+**Level:** Hard
 
 **Author:** Mizu

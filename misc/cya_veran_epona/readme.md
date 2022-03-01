@@ -8,6 +8,4 @@ Link is searching for a specific Cya Veran Epona vulnerability ID can you help h
 
 **Format**: R2Lille{ID}
 
-**Points**: 50 points
-
 **Author**: Mizu
