@@ -90,7 +90,7 @@ def challenge(s):
 if __name__ == '__main__':
     s = socket.socket()
     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    s.bind(("0.0.0.0", 4444))
+    s.bind(("0.0.0.0", 55555))
     s.listen(10)
     while True:
         client, addr = s.accept()

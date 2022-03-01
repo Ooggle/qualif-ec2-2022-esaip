@@ -34,7 +34,10 @@ async function browser(url) {
 		'domain' : host,
 			httpOnly: false});
 
-	await page.goto(url);
+	try { await page.goto(url); } catch {
+		browser.close()
+		return
+	}
 	// Click on the potion
 	await page.click('#potion')
 	// Wait for all animation
@@ -62,4 +65,4 @@ async function main() {
 };
 
 // Start routine
-setInterval(main, 20000);
+setInterval(main, 60000);
