@@ -7,7 +7,7 @@ WORKDIR /home/ctf
 
 
 COPY ./start.sh /start.sh
-COPY ./dist/challenge /home/ctf/
+COPY ./src/challenge /home/ctf/
 COPY ./src/flag.txt /home/ctf/
 
 RUN chmod +x /start.sh

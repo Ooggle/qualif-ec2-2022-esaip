@@ -1,14 +1,16 @@
 # Cryptography
 
-- Easy - My first cipher: R2Lille{4V3_C3s4r}
-- Medium - ROX my cipher: R2Lille{B4S1c_Asc11_M0duL0_1s_Us3l3ss_0n_X0R}
-- Hard - Chest flipping: R2Lille{Fl1P_Th4t_FuCK1nG_cH3ST}
+| Name            | Difficulty | Points | Flag                                          | Author |
+|-----------------|------------|--------|-----------------------------------------------|--------|
+| My first cipher |    Easy    |     50 | R2Lille{4V3_C3s4r}                            | Mizu   |
+| ROX my cipher   |   Medium   |    100 | R2Lille{B4S1c_Asc11_M0duL0_1s_Us3l3ss_0n_X0R} | Mizu   |
+| Chest flipping  |    Hard    |    200 | R2Lille{Fl1P_Th4t_FuCK1nG_cH3ST}              | Mizu   |
 
 # Forensic
 
-- Easy - My first network analysis: R2Lille{w1r35h4rk_15_my_G00d_fr13nd}
-- Suite de chall avec dump memoire ? Comme ca on par sur un peu d'OSINT github pour la partie OSINT de l'EC2
-- 
+| Name                               | Difficulty | Points | Flag                                          | Author |
+|------------------------------------|:----------:|-------:|-----------------------------------------------|--------|
+| My first network analysis          | Easy       | 50     | R2Lille{w1r35h4rk_15_my_G00d_fr13nd}          |        |
 
 # Programmation
 

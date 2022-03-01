@@ -8,6 +8,4 @@ Try to lower your balance and trick the system!
 
 **Connection**: `nc <ip> <port>`
 
-**Points**: XX points
-
 **Author**: Ooggle
