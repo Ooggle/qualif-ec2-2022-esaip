@@ -11,4 +11,4 @@ ADD ./src/ .
 RUN python -m pip install -r requirements.txt;
 
 # Start flask srv on any local IP
-CMD [ "flask", "run", "--host=0.0.0.0", "--port=8080" ]
+CMD [ "flask", "run", "--host=0.0.0.0", "--port=80" ]
