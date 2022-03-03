@@ -10,7 +10,8 @@
 
 | Name                               | Difficulty | Points | Flag                                          | Author |
 |------------------------------------|:----------:|-------:|-----------------------------------------------|--------|
-| My first network analysis          | Easy       |     50 | R2Lille{w1r35h4rk_15_my_G00d_fr13nd}          | Ooggle |
+| My first network analysis          | Medium     |     75 | R2Lille{w1r35h4rk_15_my_G00d_fr13nd}          | Ooggle |
+| hyrule_lovers                      | Medium     |     75 | R2Lille{HyRuL3_XSS_L0v3R}                     | Mizu   |
 
 # Programmation
 
