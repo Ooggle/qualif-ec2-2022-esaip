@@ -1,7 +1,7 @@
 from pwn import remote
 from re import findall
 
-s = remote("127.0.0.1", 55555)
+s = remote("hyruleshop.ec2qualifications.esaip-cyber.com", 55555)
 
 # Remove useless output
 s.recvuntil(b"enters the shop...\n")

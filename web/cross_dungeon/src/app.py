@@ -73,7 +73,7 @@ def report():
             url = request.form.get("url")
 
             # Check if valid url have been sent
-            if url[:17] == "http://localhost/":
+            if url[:4] == "http":
                 cur.execute("INSERT INTO report VALUES (?, ?);", (session["session"], url))
                 db.commit()
 

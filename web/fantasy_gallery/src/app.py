@@ -61,9 +61,9 @@ def index():
     return render_template("index.html", logged=session["logged"])
 
 
-# Galery page
-@app.route("/galery", methods=["GET", "POST"])
-def galery():
+# gallery page
+@app.route("/gallery", methods=["GET", "POST"])
+def gallery():
     # Session init
     if "userID" not in session:
         session["userID"] = urandom(16)
@@ -88,11 +88,11 @@ def galery():
             post = "MIME"
         else:
             # INSERT image in db
-            cur.execute(f"INSERT INTO galery (file_name, userID, file_length, file_content) VALUES ('{file_name}', ?, ?, ?);", (session["userID"], file_length, file_content))
+            cur.execute(f"INSERT INTO gallery (file_name, userID, file_length, file_content) VALUES ('{file_name}', ?, ?, ?);", (session["userID"], file_length, file_content))
             db.commit()
 
-    pictures = cur.execute(f"SELECT file_name, file_content FROM galery WHERE userID = ?", (session["userID"],)).fetchall()
-    return render_template("galery.html", len=len(pictures), post=post, pictures=pictures, logged=True)
+    pictures = cur.execute(f"SELECT file_name, file_content FROM gallery WHERE userID = ?", (session["userID"],)).fetchall()
+    return render_template("gallery.html", len=len(pictures), post=post, pictures=pictures, logged=True)
 
 
 # Login page
@@ -125,7 +125,7 @@ def login():
             verify = cur.execute(f"SELECT * FROM users WHERE password = ? and username = '{username}'", (password,)).fetchall()
             if len(verify) != 0:
                 session["logged"] = True
-                response = redirect("/galery", 302)
+                response = redirect("/gallery", 302)
             else:
                 response = render_template("login.html", login="fail")
 
