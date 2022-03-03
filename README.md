@@ -10,9 +10,3 @@ Qualif chals for the EC2 CTF
 - reverse
 - stegano
 - forensic
-
-## Levels
-
-- Easy (very easy)
-- Medium (easy)
-- Hard (medium)
