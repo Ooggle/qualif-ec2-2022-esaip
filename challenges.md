@@ -40,11 +40,11 @@
 
 # Steganography
 
-| Name                               | Difficulty | Points | Flag                                          | Author |
-|------------------------------------|:----------:|-------:|-----------------------------------------------|--------|
+| Name                               | Difficulty | Points | Flag                                                      | Author |
+|------------------------------------|:----------:|-------:|-----------------------------------------------------------|--------|
 | My first colored temple            | Easy       |     50 | R2Lille{010100010101001001000011010011110100010001000101} | Both   |
-| Perfect Sound Box                  | Medium     |    100 | R2Lille{P3rF3cT_S0UnD}                        | Mizu   |
-| Mystic chest                       | Medium     |    100 | R2Lille{My_Pr3c10uS}                          | Mizu   |
+| Perfect Sound Box                  | Medium     |    100 | R2Lille{P3rF3cT_S0UnD}                                    | Mizu   |
+| Mystic chest                       | Medium     |    100 | R2Lille{My_Pr3c10uS}                                      | Mizu   |
 
 # Web
 
