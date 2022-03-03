@@ -1,8 +1,9 @@
 from flask import Flask, request, redirect, render_template, make_response, session
-from captcha.image import ImageCaptcha
+from PIL import Image, ImageDraw, ImageFont
 from flask_session import Session
 from base64 import b64encode
 from random import randint
+from io import BytesIO
 from os import urandom
 
 
@@ -20,12 +21,20 @@ Session(app)
 # Generate random captcha
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ09123456789"
 def getCaptcha():
-    image = ImageCaptcha(width = 280, height = 90)
+    # Generate text
     captcha_text = ""
-    for i in range(8):
+    for i in range(6):
         captcha_text += alphabet[randint(0, len(alphabet)-1)]
-    data = image.generate(captcha_text)
-    return captcha_text, b64encode(data.getvalue()).decode()
+    # Generate captcha 
+    img = Image.new('RGB', (200, 90), color='white')
+    w = ImageDraw.Draw(img)
+    font = ImageFont.truetype("code-new-roman.bold.otf", 50)
+    w.text((20,20), captcha_text, fill=(0,0,0), font=font)
+    # Get captcha as raw
+    captcha = BytesIO()
+    img.save(captcha, format='PNG')
+    # Return image
+    return captcha_text, b64encode(captcha.getvalue()).decode()
 
 
 # Error handler
@@ -60,6 +69,9 @@ def login():
         username = request.form.get("username")
         password = request.form.get("password")
         captcha = request.form.get("captcha")
+        # Check for session
+        if not "captcha_text" in session:
+            session["captcha_text"] = "53ef3a37e955ba6798af862fd75a3af9"
         # Verify captcha
         if captcha == session["captcha_text"]:
             session["captcha_text"] = captcha_text # Changing session content after check if user failed the captcha or not
