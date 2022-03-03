@@ -35,6 +35,7 @@ def resolve(s, password):
     else:
         return "Wrong credentials!"
 
+
 if __name__ == "__main__":
     # Open wordlist
     with open(file="src/wordlist.txt", mode="r") as file:
