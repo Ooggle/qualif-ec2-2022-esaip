@@ -1,6 +1,6 @@
-In his conquest of the fire temple, Link found a .
+After opening the mystic chest in his conquest of the Water Temple, Link found a weird sound box in it.
 
-Help him to find what it is hidding!
+Help him find what it is hidding!
 
 <br>
 
