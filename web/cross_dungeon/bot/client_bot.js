@@ -8,7 +8,7 @@ const puppeteer = require('puppeteer');
 const sqlite3 = require('sqlite3')
 
 // variables
-const host = 'localhost';
+const host = 'crossdungeon.ec2qualifications.esaip-cyber.com'; // change for local
 const table = 'report';
 
 // initializing db 
@@ -32,7 +32,8 @@ async function browser(url) {
 		'name' : 'flag',
 		'value' : 'R2Lille{1NN3R_HTML_t0_XSS_3AzYYY}',
 		'domain' : host,
-			httpOnly: false});
+		httpOnly: false
+	});
 
 	try { await page.goto(url); } catch {
 		browser.close()

@@ -6,7 +6,7 @@ def generate(data, lower, higher):
     lower = AudioSegment.from_file(lower, format="mp3")
     higher = AudioSegment.from_file(higher, format="mp3")
     # Converte data to binary
-    binary = "".join([format(ord(x), "b") for x in data])
+    binary = "".join([format(ord(x), "8b") for x in data]).replace(" ", "0")
     # Generate the sound
     if binary[0] == "1":
         final_sound = higher
