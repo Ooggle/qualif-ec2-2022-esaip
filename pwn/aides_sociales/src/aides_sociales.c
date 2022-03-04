@@ -1,4 +1,4 @@
-// gcc aides_sociales.c -o challenge
+// gcc -static aides_sociales.c -o challenge
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>

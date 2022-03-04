@@ -1,3 +1,4 @@
+// gcc -static super_secret_passphrase.c -o super_secret_passphrase
 #include <stdio.h>
 #include <sys/ptrace.h>
 

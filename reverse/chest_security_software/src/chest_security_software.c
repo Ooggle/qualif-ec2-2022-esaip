@@ -1,3 +1,4 @@
+// gcc -static chest_security_software.c -o chest_security_software
 #include <stdio.h>
 #include <sys/ptrace.h>
 #include <string.h>

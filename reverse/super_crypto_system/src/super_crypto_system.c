@@ -1,3 +1,4 @@
+// gcc -static super_crypto_system.c -o super_crypto_system
 #include <stdio.h>
 #include <sys/ptrace.h>
 

@@ -1,4 +1,4 @@
-// gcc -z execstack -fno-stack-protector key_modifier.c -o challenge
+// gcc -static -z execstack -fno-stack-protector key_modifier.c -o challenge
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
