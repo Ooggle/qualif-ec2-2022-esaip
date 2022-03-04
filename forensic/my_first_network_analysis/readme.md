@@ -4,6 +4,6 @@ Found what did this person has stole from Link to get the flag.
 
 <br>
 
-**Level**: Easy
+**Level**: Medium
 
 **Author**: Ooggle

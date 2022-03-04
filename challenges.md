@@ -11,7 +11,7 @@
 | Name                               | Difficulty | Points | Flag                                          | Author |
 |------------------------------------|:----------:|-------:|-----------------------------------------------|--------|
 | My first network analysis          | Medium     |     75 | R2Lille{w1r35h4rk_15_my_G00d_fr13nd}          | Ooggle |
-| hyrule_lovers                      | Medium     |     75 | R2Lille{HyRuL3_XSS_L0v3R}                     | Mizu   |
+| Hyrule Lovers                      | Medium     |     75 | R2Lille{HyRuL3_XSS_L0v3R}                     | Mizu   |
 | Crypto Locker                      | Medium     |     75 | R2Lille{super_encryptor.py:2212}              | Ooggle |
 | Hyrule Map                         | Medium     |     75 | R2Lille{50m3_j4v4_r3v3r53}                    | Ooggle |
 
