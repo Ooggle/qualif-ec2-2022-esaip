@@ -6,7 +6,7 @@ import pytesseract
 
 def resolve(s, password):
     # Init
-    url = "http://localhost:5000/login"
+    url = "http://antibf.ec2qualifications.esaip-cyber.com/login"
     r = s.get(url)
     captcha = findall('data:image\/png;base64, (.*?)" alt="Captcha"', r.text)[0]
     captcha = b64decode(captcha)

@@ -85,7 +85,7 @@ def flag(s, key):
     if key["name"] == "Link" and key["unlock"] == 1:
         s.send(b"\n\033[37;1mWellcome back \033[32;1mLink\033[37;1m, there is your treasure:\033[0m")
         s.send(open_chest.encode())
-        s.send(b"\033[37;1mFlag: \033[32;1mR2Lille{*sensored*}\033[0m")
+        s.send(b"\033[37;1mFlag: \033[32;1mR2Lille{Fl1P_Th4t_FuCK1nG_cH3ST}\033[0m")
     elif key["name"] == "Test" and key["unlock"] == 1:
         s.send(b"\n\033[32;1mTesting key accepted! Closing...\033[0m")
     else:
@@ -103,7 +103,11 @@ def challenge(s):
     except:
         s.send(b"\n\033[31;1m=== KEY ERROR ===\033[0m\n\n")
         return False
-    key = loads(findall(b"{.*?}", key)[0])
+    try:
+        key = loads(findall(b"{.*?}", key)[0])
+    except:
+        s.send(b"\n\033[31;1m=== LOADING JSON ERROR ===\033[0m\n\n")
+        return False
     flag(s, key)
     s.send(b"\n\n")
     return True
@@ -113,7 +117,7 @@ def challenge(s):
 if __name__ == '__main__':
     s = socket.socket()
     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    s.bind(("0.0.0.0", 4444))
+    s.bind(("0.0.0.0", 55555))
     s.listen(10)
     while True:
         client, addr = s.accept()
