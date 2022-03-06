@@ -6,6 +6,6 @@ Link is searching for a specific Cya Veran Epona vulnerability ID can you help h
 
 **Level**: Easy
 
-**Format**: R2Lille{ID}
+**Format**: Example for CVE-XXX-XXXXX : R2Lille{XXXX-XXXXX}
 
 **Author**: Mizu
