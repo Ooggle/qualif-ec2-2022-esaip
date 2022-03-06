@@ -23,7 +23,6 @@ for i in range(1, 51):
     img = b64decode(x)
     img = Image.open(BytesIO(img))
     # Getting pixels
-
     pixels = img.load()
     response = dumps({"solution": "save"})
 
