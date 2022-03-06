@@ -19,14 +19,10 @@ s.sendline(b"start")
 for i in range(1, 51):
     print(f"\r\x1b[1mQuestion n°{i}\x1b[0m", end="")
     # Get image
-    try:
-        x = s.recvline().decode()
-        img = b64decode(x)
-    except:
-        print(x)
-        exit()
+    x = s.recvline().decode()
+    img = b64decode(x)
     img = Image.open(BytesIO(img))
-    # Counting white pixel
+    # Getting pixels
     pixels = img.load()
     response = dumps({"solution": "save"})
 

