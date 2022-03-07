@@ -1,4 +1,6 @@
 clear_text = ""
+key = [10, 56, 132, 28, 205]
+
 with open(file="flag.enc", mode="r") as file:
     cipher_text = file.read()
 
